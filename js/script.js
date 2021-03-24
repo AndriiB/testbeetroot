@@ -58,7 +58,7 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-// Filder by first select
+// Filter by category select
 mealSelect.addEventListener("change", (e) => {
   let val = e.target.value;
   for (let i = 0; i < items.length; i++) {
@@ -70,89 +70,22 @@ mealSelect.addEventListener("change", (e) => {
   }
 });
 
-// let price = document.getElementById("priceSelect").value;
-// if (price == 0 && price <= items[i].dataset.price) {
-//   items[i].classList.add("hide");
-// } else {
-//   items[i].classList.remove("hide");
-// }
-
-// //Iterate the selection elements and add the function to the 'change' event
-// const sels = document.getElementsByTagName("select");
-// for (i = 0; i < sels.length; i++) {
-//   sels[i].addEventListener("change", (e) => {
-//     let val = e.target.value;
-//     for (let i = 0; i < items.length; i++) {
-//       if (val !== items[i].dataset.type && val !== "0") {
-//         items[i].classList.add("hide");
-//       } else {
-//         items[i].classList.remove("hide");
-//       }
-//     }
-//     let price = document.getElementById("priceSelect").value;
-//     if (price == 0 && price <= items[i].dataset.price) {
-//       items[i].classList.add("hide");
-//     } else {
-//       items[i].classList.remove("hide");
-//     }
-//   });
-// }
-
-// // Filter by price inline
-
-// priceSelect.addEventListener("change", (e) => {
-//   let val = e.target.value;
-//   for (let i = 0; i < items.length; i++) {
-//     if (val == 0) {
-//       items[i].style.display = "block";
-//     } else if (val == 30 && items[i].dataset.price <= 30) {
-//       items[i].style.display = "block";
-//     } else if (val == 50 && items[i].dataset.price <= 50) {
-//       items[i].style.display = "block";
-//     } else if (val == 100 && items[i].dataset.price <= 100) {
-//       items[i].style.display = "block";
-//     } else if (val == 150 && items[i].dataset.price <= 150) {
-//       items[i].style.display = "block";
-//     } else {
-//       items[i].style.display = "none";
-//     }
-//   }
-// });
-
-//Add class
-
-// priceSelect.addEventListener("change", (e) => {
-//   let val = e.target.value;
-//   for (let i = 0; i < items.length; i++) {
-//     if (val == 0) {
-//       items[i].classList.remove("hide");
-//     } else if (val == 30 && items[i].dataset.price <= 30) {
-//       items[i].classList.remove("hide");
-//     } else if (val == 50 && items[i].dataset.price <= 50) {
-//       items[i].classList.remove("hide");
-//     } else if (val == 100 && items[i].dataset.price <= 100) {
-//       items[i].classList.remove("hide");
-//     } else if (val == 150 && items[i].dataset.price <= 150) {
-//       items[i].classList.remove("hide");
-//     } else {
-//       items[i].classList.add("hide");
-//     }
-//   }
-// });
-
-// for (let i = 0; i < items.length; i++) {
-//   //   console.log(items[i].dataset.price);
-//   // }
-
-//Filter by category
-
-// mealSelect.addEventListener("change", (e) => {
-//   let val = e.target.value;
-//   for (let i = 0; i < items.length; i++) {
-//     if (val !== items[i].dataset.type && val !== "0") {
-//       items[i].classList.add("hide");
-//     } else {
-//       items[i].classList.remove("hide");
-//     }
-//   }
-// });
+// // Filter by price select
+priceSelect.addEventListener("change", (e) => {
+  let val = e.target.value;
+  for (let i = 0; i < items.length; i++) {
+    if (val == 0) {
+      items[i].classList.remove("hide");
+    } else if (val == 30 && items[i].dataset.price <= 30) {
+      items[i].classList.remove("hide");
+    } else if (val == 50 && items[i].dataset.price <= 50) {
+      items[i].classList.remove("hide");
+    } else if (val == 100 && items[i].dataset.price <= 100) {
+      items[i].classList.remove("hide");
+    } else if (val == 150 && items[i].dataset.price <= 150) {
+      items[i].classList.remove("hide");
+    } else {
+      items[i].classList.add("hide");
+    }
+  }
+});
